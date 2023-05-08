@@ -17,6 +17,7 @@
     src: "https://github.com/prometheus/prometheus/releases/download/v{{ version }}/prometheus-{{ version }}.linux-amd64.tar.gz"
     dest: /tmp/
     remote_src: yes
+    validate_certs: no
 
 - name: Copy prometheus file to bin
   copy:

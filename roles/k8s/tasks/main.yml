@@ -1,0 +1,13 @@
+- name: Create a Deployment by reading the definition from a local file
+  kubernetes.core.k8s:
+    state: present
+    src: "{{ role_path }}/files/fluentd.yml"
+  tags: k8s
+
+- name: Get a list of all pods labelled app=fluentd
+  kubernetes.core.k8s_info:
+    kind: Pod
+    label_selectors:
+      - app = fluentd
+    register: pod_list
+  tags: k8s

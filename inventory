@@ -1,11 +1,12 @@
 [prometheus]
-18.219.214.78
+192.168.56.17 ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 [node_exporter]
-18.222.105.189
+192.168.56.16 ansible_ssh_private_key_file=~/.ssh/id_rsa
+192.168.56.17 ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 [alertmanager]
-18.219.214.78
+192.168.56.17 ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 [grafana]
-18.223.203.246
+192.168.56.17 ansible_ssh_private_key_file=~/.ssh/id_rsa

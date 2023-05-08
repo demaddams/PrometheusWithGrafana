@@ -26,3 +26,10 @@
   become_method: sudo
   roles:
     - grafana
+
+- hosts: kubectl
+  #become: yes
+  #become_user: root
+  #become_method: sudo
+  roles:
+    - k8s
